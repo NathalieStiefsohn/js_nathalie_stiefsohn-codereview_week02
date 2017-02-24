@@ -4,9 +4,9 @@
 	<title></title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
-
+	<script type="text/javascript" src="script.js"></script>
 </head>
-<body>
+<body onload="naming(), background()">
 
 <header class="flex_header">
 	<!-- <figure><img src="http://www.zontikgames.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/p/r/primary_4.jpg" alt="logo"></figure> -->
@@ -14,22 +14,22 @@
 </header>
 <section class="flex_section">
 	<div class="column_section" id="player1">
-		<div class="result" id="result_p1">lksajdl</div>
+		<div class="result" id="result_p1">dice for result</div>
 		<figure>
 			<img src="https://s-media-cache-ak0.pinimg.com/236x/af/05/2f/af052f49e428bf04b3016b0dbfce3fe3.jpg" alt="player1">
 			<figcaption id="caption_player1">Player 1</figcaption>
-			<button>Dice for your Life</button>
+			<button id="button1" onclick="dice1(), rotate1()">Dice for your Life</button>
 		</figure>
 	</div>
 	<div class="column_section" id="vs">
 		<h2>VS.</h2>
 	</div>
 	<div class="column_section" id="player2">
-		<div class="result" id="result_p2">lkajsdf</div>
+		<div class="result" id="result_p2">dice for result</div>
 		<figure>
 			<img src="http://www.abload.de/img/mafiosi5kgz.jpg" alt="player2">
 			<figcaption id="caption_player2">Player 2</figcaption>
-			<button>Dice for your Life</button>
+			<button id="button2" onclick="dice2()">Dice for your Life</button>
 		</figure>
 
 	</div>
@@ -37,21 +37,20 @@
 </section>
 <main class="flex_main">
 	<div class="column_main flex_main_div">
-		<div class="column_main_div"></div>
-		<div class="column_main_div"></div>
-		<div class="column_main_div"></div>
+		<div class="column_main_div" id="player1_dice1" ><h3 id="p1_d1"></h3></div>
+		<div class="column_main_div" id="player1_dice2"><h3 id="p1_d2"></h3></div>
+		<div class="column_main_div" id="player1_dice3"><h3 id="p1_d3"></h3></div>
 	</div>
 	<div class="column_main flex_main_div">
-		<div class="column_main_div"></div>
-		<div class="column_main_div"></div>
-		<div class="column_main_div"></div>
+		<div class="column_main_div" id="player2_dice1"><h3 id="p2_d1"></h3></div>
+		<div class="column_main_div" id="player2_dice2"><h3 id="p2_d2"></h3></div>
+		<div class="column_main_div" id="player2_dice3"><h3 id="p2_d3"></h3></div>
 	</div>
 </main>
-<footer></footer>
+<footer><p>&copy; All Rights Reserved for Nathalie Stiefsohn</p></footer>
 
 
 
-<script src="script.js">
-</script>
+
 </body>
 </html>

@@ -4,43 +4,9 @@ body * {
   margin: 5px 5px 5px 5px;
   /*border: 1px solid; */
   font-family: sans-serif;
+  position: relative;
+  /*color:white;*/
 }
-
-header {
-	background-image: url(http://i.huffpost.com/gen/1810521/images/n-MAFIA-large570.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 100%;
-	height: 200px;
-	box-shadow: 2px 2px 11px -2px rgba(0,0,0,0.75);
-
-}
-
-.flex_header {
-	align-content: flex-end;
-	display: flex;
-	align-items: flex-end;
-	justify-content: center;
-	flex-wrap: nowrap;
-	flex-direction: row;
-}
-header img {
-  max-width: 150px;
-  width: 80%;
-  /*align-content: center;*/
-  margin-left: auto; 
-  margin-right: auto; 
-  display: block;
-}
-
-header h2 {
-	color: white;
-	margin-right: 5%;
-	box-shadow: 2px 2px 11px -2px white;
-}
-
-
-
 .flex_section, .flex_main, .flex_main_div {
 	display: flex;
 	flex-wrap: nowrap;
@@ -48,65 +14,135 @@ header h2 {
 	justify-content: space-around;	
 }
 
-.column_header {
-	display: inline-flex;
-	width: 33.333%;
-	text-align: center;
-}
+/*START OF HEADER*/
+	header {
+		background-image: url(http://i.huffpost.com/gen/1810521/images/n-MAFIA-large570.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100%;
+		height: 200px;
+		box-shadow: 2px 2px 11px -2px rgba(0,0,0,0.75);
 
-.column_header * {
-	margin-left: auto; 
-  	margin-right: auto; 
-}
+	}
 
-section * {
-	text-align: center;
-	justify-content: center;
-	margin:0px;
-	padding:0px;
-}
+	.flex_header {
+		align-content: flex-end;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		flex-wrap: nowrap;
+		flex-direction: row;
+	}
+	header img {
+	  max-width: 150px;
+	  width: 80%;
+	  /*align-content: center;*/
+	  margin-left: auto; 
+	  margin-right: auto; 
+	  display: block;
+	}
 
-#vs {
-	margin-top: auto;
-	margin-bottom: auto;
-}
-section img {
-	max-height: 100px;
-	height: 70%;
-	box-shadow: 2px 2px 11px -2px rgba(0,0,0,0.75);
-}
-.result {
-	color: red;
-	font-size: small;
-	margin: 5px;
-	font-weight: bold;
-}
+	header h2 {
+		color: white;
+		margin-right: 5%;
+		box-shadow: 2px 2px 11px -2px white;
+	}
 
-main {
-	background-image: url(http://www.hillwoodproducts.com/wp-content/uploads/2015/03/wood1.jpg);
-	background-size: 100%;
-	background-position: center;
-	background-repeat:no-repeat;
-	box-shadow: 2px 2px 11px -2px rgba(0,0,0,0.75);
-}
-.column_main {
-	flex-grow: 1;
-	background-image: url(http://cdn.shutterstock.com/shutterstock/videos/3352481/thumb/4.jpg);
-	background-repeat: no-repeat;
-	background-size: 100%;
-	background-position: center;
-	/*max-height: 300px;*/
-	height: 200px;
-	box-shadow: 2px 2px 11px -2px rgba(0,0,0,0.75);
-}
+	.column_header {
+		display: inline-flex;
+		width: 33.333%;
+		text-align: center;
+	}
+
+	.column_header * {
+		margin-left: auto; 
+	  	margin-right: auto; 
+	}
+
+/*END OF HEADER*/
 
 
-.column_main_div {
-	width: 10%;
-	height: 20%;
-	align-self: center;
-	background-color: white;
-	box-shadow: 2px 2px 11px -2px rgba(0,0,0,0.75);	
-	border-radius: 10px;
-}
+
+
+
+/*START OF SECTION*/
+	section * {
+		text-align: center;
+		justify-content: center;
+		margin:0px;
+		padding:0px;
+	}
+
+	section figcaption, section h2 {
+		color:white;
+	}
+	#vs {
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+	section img {
+		max-height: 100px;
+		height: 70%;
+		box-shadow: 2px 2px 11px -2px rgba(0,0,0,0.75);
+	}
+	section figcaption {
+		font-weight: bolder;
+	}
+	.result {
+		color: red;
+		font-size: small;
+		margin: 5px;
+		font-weight: bold;
+	}
+
+/*END OF SECTION*/
+
+
+/*START OF MAIN*/
+	main {
+		background-image: url(http://www.hillwoodproducts.com/wp-content/uploads/2015/03/wood1.jpg);
+		height: 200px;
+		background-size: 100%;
+		background-position: center;
+		background-repeat:no-repeat;
+		box-shadow: 2px 2px 11px -2px rgba(0,0,0,0.75);
+	}
+	.column_main {
+		flex-grow: 1;
+		background-image: url(http://cdn.shutterstock.com/shutterstock/videos/3352481/thumb/4.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: bottom;
+		/*max-height: 300px;*/
+		/*height: 100%;*/
+		box-shadow: inset 2px 2px 11px -2px rgba(0,0,0,0.75);
+		align-content: stretch;
+		margin:1%;
+	}
+
+
+	.column_main_div {
+		width: 40px;
+		height: 40px;
+		align-self: center;
+		background-color: white;
+		/*box-shadow: inset 2px 2px 11px -2px rgba(0,0,0,0.75);	*/
+		box-shadow: 2px 2px 11px -2px rgba(0,0,0,0.75);
+		border-radius: 10px;
+		/*justify-content: center;*/
+		/*vertical-align: middle;*/
+		line-height: 90%;
+		text-align: center;
+		margin-bottom: 20%;
+		margin-top:10%;
+	}
+/*END OF MAIN*/
+
+/*START OF FOOTER*/
+	footer p {
+		font-size: small;
+		color: grey;
+	}
+/*END OF FOOTER*/
+
 /*# sourceMappingURL=style.css.map */
