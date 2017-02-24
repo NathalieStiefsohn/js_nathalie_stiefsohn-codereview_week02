@@ -12,9 +12,22 @@ function naming () {
 
 // Rolling the Dice for the first player
 function dice1 () {
+// this would be the easy approach but you want it differently with an array
+// Without array I would only keep these 3 lines and continue with document.getElementByID....
 	var Dice1 = Math.round(Math.random()*5+1);
 	var Dice2 = Math.round(Math.random()*5+1);
 	var Dice3 = Math.round(Math.random()*5+1);
+
+// array - for my solution this would be unnecessary - but you want an array
+	var Dices = [];
+	Dices.push(Dice1);
+	Dices.push(Dice2);
+	Dices.push(Dice3);
+
+	var Dice1 = Number(Dices.slice(0,1))
+	var Dice2 = Number(Dices.slice(1,2))
+	var Dice3 = Number(Dices.slice(2,3))
+// end of unnecessary part
 
 	document.getElementById("p1_d1").innerHTML = Dice1;
 	document.getElementById("p1_d2").innerHTML = Dice2;
@@ -26,9 +39,23 @@ function dice1 () {
 }
 // Rolling the Dice for the second player
 function dice2 () {
+	
+// this would be the easy approach but you want it differently with an array
+// Without array I would only keep these 3 lines and continue with document.getElementByID....
 	var Dice1 = Math.round(Math.random()*5+1);
 	var Dice2 = Math.round(Math.random()*5+1);
 	var Dice3 = Math.round(Math.random()*5+1);
+
+// array - for my solution this would be unnecessary - but you want an array
+	var Dices = [];
+	Dices.push(Dice1);
+	Dices.push(Dice2);
+	Dices.push(Dice3);
+
+	var Dice1 = Number(Dices.slice(0,1))
+	var Dice2 = Number(Dices.slice(1,2))
+	var Dice3 = Number(Dices.slice(2,3))
+// end of unnecessary part
 
 	document.getElementById("p2_d1").innerHTML = Dice1;
 	document.getElementById("p2_d2").innerHTML = Dice2;
@@ -40,8 +67,8 @@ function dice2 () {
 }
 
 // changing the background color
-
-function background ()
+// anonymous function
+var Background = function ()
 {
 	var Red = Math.floor((Math.random())*25);
 	var Green = Math.floor((Math.random())*25);
