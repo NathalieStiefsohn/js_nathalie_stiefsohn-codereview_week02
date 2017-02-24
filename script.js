@@ -64,6 +64,7 @@ function dice2 () {
 	var Sum = Dice1+Dice2+Dice3
 
 	document.getElementById("result_p2").innerHTML = "Result: "+Sum;
+
 }
 
 // changing the background color
